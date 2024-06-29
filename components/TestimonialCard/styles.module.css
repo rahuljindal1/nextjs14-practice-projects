@@ -1,0 +1,33 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 200px 424px;
+  background-color: slateblue;
+  color: white;
+  padding: 72px 24px 60px;
+  position: relative;
+  border-radius: 12px;
+  font-family: cursive;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+  .profileImage {
+    position: absolute;
+    top: -54px;
+    left: 41.5%;
+    border-radius: 100%;
+    border: 2px solid slateblue;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .creator {
+      font-size: 12px;
+    }
+  }
+}
