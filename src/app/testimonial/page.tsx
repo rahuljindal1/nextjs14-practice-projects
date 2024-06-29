@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import TestimonialCard from "../../../components/TestimonialCard";
+import TestimonialCard from "./TestimonialCard";
 import { TESTIMONIAL_DATA } from "../../../public/data";
 
 const SLIDER_DURATION_IN_MILLISECONDS = 5000;
