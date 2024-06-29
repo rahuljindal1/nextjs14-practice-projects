@@ -1,3 +1,5 @@
+import classes from "./styles.module.css";
+
 type Props = {
   btnText: string;
   onClick: () => void;
@@ -10,7 +12,7 @@ export default function Button({
   isDisabled = false,
 }: Props) {
   return (
-    <button disabled={isDisabled} onClick={onClick}>
+    <button className={classes.button} disabled={isDisabled} onClick={onClick}>
       {btnText}
     </button>
   );

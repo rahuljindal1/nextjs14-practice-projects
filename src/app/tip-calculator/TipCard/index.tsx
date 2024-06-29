@@ -3,6 +3,7 @@
 import { ChangeEvent, useState } from "react";
 import Button from "../Button";
 import LabelInput from "../LabelInput";
+import classes from "./styles.module.css";
 
 export default function TipCalculatorCard() {
   const [billAmount, setBillAmount] = useState<string>("");
@@ -27,9 +28,9 @@ export default function TipCalculatorCard() {
   };
 
   return (
-    <main>
-      <div>Tip Calculator</div>
-      <div>
+    <main className={classes.mainContainer}>
+      <div className={classes.title}>Tip Calculator</div>
+      <div className={classes.description}>
         Enter the bill amount and tip percentage to calculate the total.
       </div>
       <LabelInput
@@ -41,7 +42,7 @@ export default function TipCalculatorCard() {
         }
       />
       <LabelInput
-        label="Tip Percentage"
+        label="Tip Percentage:"
         name="tipPercentage"
         value={tipPercentage}
         onChange={(e: ChangeEvent<HTMLInputElement>) =>
@@ -50,7 +51,7 @@ export default function TipCalculatorCard() {
       />
       <Button btnText="CALCULATE" onClick={calculateTotalAmount} />
       <div>
-        Total: <span>{totalAmount}</span>
+        Total: <span className={classes.total}>{totalAmount}</span>
       </div>
     </main>
   );
