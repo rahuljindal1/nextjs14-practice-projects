@@ -1,3 +1,5 @@
+import TipCalculatorCard from "./TipCard";
+
 export default function TipCalculator() {
-  return <div>Tip Calculator</div>;
+  return <TipCalculatorCard />;
 }
