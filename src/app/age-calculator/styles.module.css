@@ -20,11 +20,6 @@
 
   .dateInput {
     min-width: 50%;
-    font-size: 0.8rem;
-    padding: 6px 8px;
-    border-width: 1px;
-    border-color: rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
   }
 
   .result {
