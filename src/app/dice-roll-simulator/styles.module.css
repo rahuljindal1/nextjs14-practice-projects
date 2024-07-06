@@ -1,0 +1,26 @@
+.mainContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+
+  .title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 12px;
+  }
+
+  .diceContainer {
+    margin: 24px;
+  }
+
+  .btnContainer {
+    margin: 24px;
+  }
+
+  .rollHistoryContainer {
+    margin: 24px;
+    min-width: 40%;
+  }
+}
