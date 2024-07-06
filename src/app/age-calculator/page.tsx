@@ -1,10 +1,12 @@
+"use client";
+
 import Card from "../../../components/Card";
 import styles from "./styles.module.css";
 
 export default function AgeCalculator() {
   return (
     <main className={styles.mainContainer}>
-      <Card>
+      <Card customStyles={[styles.cardStyles]}>
         <div className={styles.title}>Age Calculator</div>
         <div className={styles.subTitle}>Enter your date of birth</div>
         <input className={styles.dateInput} type="date" />
