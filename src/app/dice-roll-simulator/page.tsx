@@ -9,15 +9,34 @@ import styles from "./styles.module.css";
 const randomDiceRollNumber = () => Math.floor(Math.random() * 6) + 1;
 
 export default function DiceRollSimulator() {
-  const [currentRollNumber, setCurrentRollNumber] = useState(
-    randomDiceRollNumber()
-  );
+  const [currentRollNumber, setCurrentRollNumber] =
+    useState(randomDiceRollNumber);
   const [rollHistory, setRollHistory] = useState<number[]>([]);
 
   const rollDiceClickHandler = () => {
     const currentRoll = randomDiceRollNumber();
     setCurrentRollNumber(currentRoll);
     setRollHistory([...rollHistory, currentRoll]);
+  };
+
+  const clearBtnClickHandler = () => {
+    setRollHistory([]);
+  };
+
+  const ClearBtn = () => {
+    if (rollHistory.length === 0) {
+      return <></>;
+    }
+
+    return (
+      <div className={styles.btnContainer}>
+        <Button
+          btnText="Clear"
+          type="secondary"
+          onClick={clearBtnClickHandler}
+        />
+      </div>
+    );
   };
 
   return (
@@ -36,6 +55,7 @@ export default function DiceRollSimulator() {
       <div className={styles.rollHistoryContainer}>
         <RollHistory rollHistory={rollHistory} />
       </div>
+      <ClearBtn />
     </main>
   );
 }

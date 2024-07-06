@@ -8,6 +8,12 @@
   border-radius: 5px;
 }
 
+.secondary {
+  background-color: white;
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+
 .buttonLarge {
   font-size: 1.5rem;
 }
