@@ -11,6 +11,9 @@ export default function Home() {
         <li className={classes.projectListItem}>
           <Link href="/tip-calculator">Tip Calculator</Link>
         </li>
+        <li className={classes.projectListItem}>
+          <Link href="/age-calculator">Age Calculator</Link>
+        </li>
       </ul>
     </main>
   );
