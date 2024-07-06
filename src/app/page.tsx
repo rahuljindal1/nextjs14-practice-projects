@@ -14,6 +14,9 @@ export default function Home() {
         <li className={classes.projectListItem}>
           <Link href="/age-calculator">Age Calculator</Link>
         </li>
+        <li className={classes.projectListItem}>
+          <Link href="/dice-roll-simulator">Dice Roll Simulator</Link>
+        </li>
       </ul>
     </main>
   );

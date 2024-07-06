@@ -21,3 +21,4 @@ bun dev
 1. Testimonial Finder
 2. Tip Calculator
 3. Age Calculator
+4. Dice Roll Simulator [ In Progress ]
