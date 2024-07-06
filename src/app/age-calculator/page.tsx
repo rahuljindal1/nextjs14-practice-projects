@@ -1,6 +1,6 @@
 "use client";
 
-import Card from "../../../components/Card";
+import { Button, Card } from "../../../components";
 import styles from "./styles.module.css";
 
 export default function AgeCalculator() {
@@ -10,7 +10,7 @@ export default function AgeCalculator() {
         <div className={styles.title}>Age Calculator</div>
         <div className={styles.subTitle}>Enter your date of birth</div>
         <input className={styles.dateInput} type="date" />
-        <button className={styles.btn}>Calculate Age</button>
+        <Button btnText="Calculate Age" onClick={() => {}} />
         <div className={styles.result}>Your age is 2 years old</div>
       </Card>
     </main>

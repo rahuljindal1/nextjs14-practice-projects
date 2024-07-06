@@ -1,10 +1,9 @@
 "use client";
 
 import { useState, ChangeEvent } from "react";
-import Card from "../../../components/Card";
-import Button from "./components/Button";
 import LabelInput from "./components/LabelInput";
 import classes from "./styles.module.css";
+import { Button, Card } from "../../../components";
 
 export default function TipCalculator() {
   const [billAmount, setBillAmount] = useState<string>("");
