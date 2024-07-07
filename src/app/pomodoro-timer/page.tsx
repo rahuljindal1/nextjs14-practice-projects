@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "../../../components";
 import styles from "./styles.module.css";
 
@@ -13,12 +13,13 @@ const defaultTimer = { minutes: "25", seconds: "00" };
 
 export default function PomodoroTimer() {
   const [isTimerOn, setIsTimeOn] = useState(false);
-  const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | undefined>();
+  const timerIdRef = useRef<NodeJS.Timeout | null>(null);
   const [timer, setTimer] = useState<Timer>(defaultTimer);
 
   const resetBtnHandler = () => {
     setTimer(defaultTimer);
     setIsTimeOn(false);
+    if (timerIdRef.current) clearTimeout(timerIdRef.current);
   };
 
   const startBtnHandler = () => {
@@ -27,7 +28,7 @@ export default function PomodoroTimer() {
 
   const stopBtnHandler = () => {
     setIsTimeOn(false);
-    clearTimeout(timeoutId);
+    if (timerIdRef.current) clearTimeout(timerIdRef.current);
   };
 
   const reduceTimerCount = () => {
@@ -53,11 +54,14 @@ export default function PomodoroTimer() {
       return;
     }
 
-    const newTimeoutId = setTimeout(() => {
+    timerIdRef.current = setTimeout(() => {
       reduceTimerCount();
-      setTimeoutId(newTimeoutId);
     }, 1000);
-  }, [isTimerOn, timeoutId]);
+
+    return () => {
+      if (timerIdRef.current) clearTimeout(timerIdRef.current);
+    };
+  }, [isTimerOn, timer]);
 
   return (
     <main className={styles.mainContainer}>
