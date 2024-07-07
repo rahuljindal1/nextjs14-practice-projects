@@ -2,11 +2,11 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Pomodoro Timer",
-  description: "Efficient and intutitive pomodoro timer",
+  description: "Efficient and intutitive pomodoro timer"
 };
 
 export default function Layout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {

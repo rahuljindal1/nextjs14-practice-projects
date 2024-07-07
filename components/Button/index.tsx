@@ -14,7 +14,7 @@ export default function Button({
   onClick,
   isDisabled = false,
   size = "normal",
-  type = "primary",
+  type = "primary"
 }: Props) {
   return (
     <button

@@ -5,11 +5,11 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Next.js Projects",
-  description: "Exciting and cool new mini Next.js projects",
+  description: "Exciting and cool new mini Next.js projects"
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {

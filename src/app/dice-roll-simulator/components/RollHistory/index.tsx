@@ -2,7 +2,7 @@ import RollHistoryItem from "./RollHistoryItem";
 import styles from "./styles.module.css";
 
 export default function RollHistory({
-  rollHistory,
+  rollHistory
 }: {
   rollHistory: number[];
 }) {

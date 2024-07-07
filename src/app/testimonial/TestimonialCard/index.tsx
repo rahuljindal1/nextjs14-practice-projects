@@ -12,7 +12,7 @@ export default function TestimonialCard({
   profileImageUrl,
   alt,
   description,
-  creator,
+  creator
 }: Props) {
   return (
     <section className={styles.mainContainer}>

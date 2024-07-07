@@ -12,7 +12,7 @@ export default function Testimonial() {
     profileImageUrl: TESTIMONIAL_DATA[0].profileImageURL,
     alt: TESTIMONIAL_DATA[0].alt,
     description: TESTIMONIAL_DATA[0].description,
-    creator: TESTIMONIAL_DATA[0].creator,
+    creator: TESTIMONIAL_DATA[0].creator
   });
 
   const slide = () => {
@@ -27,7 +27,7 @@ export default function Testimonial() {
       profileImageUrl: TESTIMONIAL_DATA[newCurrentIndex].profileImageURL,
       alt: TESTIMONIAL_DATA[newCurrentIndex].alt,
       description: TESTIMONIAL_DATA[newCurrentIndex].description,
-      creator: TESTIMONIAL_DATA[newCurrentIndex].creator,
+      creator: TESTIMONIAL_DATA[newCurrentIndex].creator
     }));
   };
 

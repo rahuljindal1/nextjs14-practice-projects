@@ -2,11 +2,11 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Testimonial Slider",
-  description: "Find dynamic and beautiful testimonial slider here!!!",
+  description: "Find dynamic and beautiful testimonial slider here!!!"
 };
 
 export default function Layout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {

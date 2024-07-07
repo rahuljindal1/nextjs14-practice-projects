@@ -17,7 +17,7 @@ export default function Input({
   onChange,
   name,
   customStyles = [],
-  type = "text",
+  type = "text"
 }: Props) {
   const Label = () => (label ? <label htmlFor={name}>{label}</label> : <></>);
   return (

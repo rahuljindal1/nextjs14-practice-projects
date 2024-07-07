@@ -9,7 +9,7 @@ import styles from "./styles.module.css";
 const randomDiceRollNumber = () => Math.floor(Math.random() * 6) + 1;
 
 const animateDiceConfig = {
-  durationInMilliSeconds: 2000,
+  durationInMilliSeconds: 2000
 };
 
 export default function DiceRollSimulator() {
