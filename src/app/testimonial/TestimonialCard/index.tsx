@@ -1,5 +1,5 @@
 import Image from "next/image";
-import classes from "./styles.module.css";
+import styles from "./styles.module.css";
 
 type Props = {
   profileImageUrl: string;
@@ -15,19 +15,19 @@ export default function TestimonialCard({
   creator,
 }: Props) {
   return (
-    <section className={classes.mainContainer}>
+    <section className={styles.mainContainer}>
       <header>
         <Image
           src={profileImageUrl}
           alt={alt}
           height={100}
           width={100}
-          className={classes.profileImage}
+          className={styles.profileImage}
         />
       </header>
-      <main className={classes.main}>
+      <main className={styles.main}>
         <div>{description}</div>
-        <div className={classes.creator}> - {creator}</div>
+        <div className={styles.creator}> - {creator}</div>
       </main>
     </section>
   );

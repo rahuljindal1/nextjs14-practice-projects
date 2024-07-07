@@ -2,13 +2,8 @@
 
 import classNames from "classnames";
 import styles from "./styles.module.css";
-import { useState } from "react";
 import { css, keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
-
-type AnimationStyle = {
-  animation?: string;
-};
 
 type AnimateConfig = {
   durationInMilliSeconds: number;
@@ -26,19 +21,19 @@ const rotateDiceAnimation = keyframes`
   }
 `;
 
-const AnimatedContainer = styled.div<{
-  animationDurationInMilliseconds: number;
+const AnimateContainer = styled.div<{
+  animationDurationInSeconds: number;
 }>`
-  ${({ animationDurationInMilliseconds: animateDurationInMilliseconds }) =>
-    animateDurationInMilliseconds
+  ${({ animationDurationInSeconds }) =>
+    animationDurationInSeconds
       ? css`
-          animation: ${rotateDiceAnimation}
-            ${animateDurationInMilliseconds / 1000}s ease-in-out;
+          animation: ${rotateDiceAnimation} ${animationDurationInSeconds}s
+            forwards;
         `
       : ""}
 `;
 
-const blackDotIndexesPerNumber: { [key: string]: number[] } = {
+const dotVisibilityIndexMap: { [key: string]: number[] } = {
   1: [4],
   2: [0, 8],
   3: [0, 4, 8],
@@ -58,33 +53,23 @@ export default function Dice({
   size?: "default" | "small";
   animate?: AnimateConfig;
 }) {
-  const [animationStyle, setAnimationStyle] = useState<
-    AnimationStyle | undefined
-  >(
-    animate
-      ? {
-          animation: `rotateDice ${animate.durationInMilliSeconds / 1000}s forwards`,
-        }
-      : {}
-  );
-
   const addShowDotClass = (index: number) => {
-    if (blackDotIndexesPerNumber[number].includes(index)) {
+    if (dotVisibilityIndexMap[number].includes(index)) {
       return styles.showDot;
     }
   };
 
-  if (animate && animationStyle?.animation) {
-    setTimeout(() => setAnimationStyle({}), animate.durationInMilliSeconds);
-  }
-
   return (
-    <AnimatedContainer
+    <AnimateContainer
       className={classNames(
         styles.container,
         size === "small" ? styles.smallContainer : ""
       )}
-      animationDurationInMilliseconds={animate?.durationInMilliSeconds || 0}
+      animationDurationInSeconds={
+        animate?.durationInMilliSeconds
+          ? animate?.durationInMilliSeconds / 1000
+          : 0
+      }
     >
       {Array(9)
         .fill(0)
@@ -98,6 +83,6 @@ export default function Dice({
             key={index}
           />
         ))}
-    </AnimatedContainer>
+    </AnimateContainer>
   );
 }

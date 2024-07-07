@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, ChangeEvent } from "react";
-import classes from "./styles.module.css";
+import styles from "./styles.module.css";
 import { Button, Card, Input } from "../../../components";
 
 export default function TipCalculator() {
@@ -27,10 +27,10 @@ export default function TipCalculator() {
   };
 
   return (
-    <div className={classes.mainContainer}>
+    <div className={styles.mainContainer}>
       <Card>
-        <div className={classes.title}>Tip Calculator</div>
-        <div className={classes.description}>
+        <div className={styles.title}>Tip Calculator</div>
+        <div className={styles.description}>
           Enter the bill amount and tip percentage to calculate the total.
         </div>
         <Input
@@ -52,7 +52,7 @@ export default function TipCalculator() {
         />
         <Button btnText="CALCULATE" onClick={calculateTotalAmount} />
         <div>
-          Total: <span className={classes.total}>{totalAmount}</span>
+          Total: <span className={styles.total}>{totalAmount}</span>
         </div>
       </Card>
     </div>

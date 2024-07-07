@@ -1,5 +1,5 @@
 import { ChangeEvent, HTMLInputTypeAttribute } from "react";
-import classes from "./styles.module.css";
+import styles from "./styles.module.css";
 import classNames from "classnames";
 
 type Props = {
@@ -21,13 +21,13 @@ export default function Input({
 }: Props) {
   const Label = () => (label ? <label htmlFor={name}>{label}</label> : <></>);
   return (
-    <main className={classNames(classes.mainContainer, customStyles)}>
+    <main className={classNames(styles.mainContainer, customStyles)}>
       <Label />
       <input
         name={name}
         value={value}
         onChange={onChange}
-        className={classes.input}
+        className={styles.input}
         type={type}
       />
     </main>

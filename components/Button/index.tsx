@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import classes from "./styles.module.css";
+import styles from "./styles.module.css";
 
 type Props = {
   btnText: string;
@@ -19,10 +19,10 @@ export default function Button({
   return (
     <button
       className={classNames(
-        classes.button,
-        size === "large" ? classes.buttonLarge : "",
-        type == "secondary" ? classes.secondary : "",
-        isDisabled ? classes.btnDisabled : ""
+        styles.button,
+        size === "large" ? styles.buttonLarge : "",
+        type == "secondary" ? styles.secondary : "",
+        isDisabled ? styles.btnDisabled : ""
       )}
       disabled={isDisabled}
       onClick={onClick}

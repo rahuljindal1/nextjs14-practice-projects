@@ -1,5 +1,5 @@
 import Dice from "../../Dice";
-import classes from "./styles.module.css";
+import styles from "./styles.module.css";
 
 export default function RollHistoryItem({
   number,
@@ -9,8 +9,8 @@ export default function RollHistoryItem({
   order: number;
 }) {
   return (
-    <main className={classes.mainContainer}>
-      <div className={classes.rollNumber}>Roll: {order}</div>
+    <main className={styles.mainContainer}>
+      <div className={styles.rollNumber}>Roll: {order}</div>
       <Dice number={number} size="small" />
     </main>
   );
