@@ -6,7 +6,8 @@ const projects = [
   { id: 2, title: "Tip Calculator", link: "/tip-calculator" },
   { id: 3, title: "Age Calculator", link: "/age-calculator" },
   { id: 4, title: "Dice Roll Simulator", link: "/dice-roll-simulator" },
-  { id: 5, title: "Pomodoro Timer", link: "/pomodoro-timer" }
+  { id: 5, title: "Pomodoro Timer", link: "/pomodoro-timer" },
+  { id: 5, title: "Rock Paper Scissors Game", link: "/rock-paper-scissors" }
 ];
 
 export default function Home() {
