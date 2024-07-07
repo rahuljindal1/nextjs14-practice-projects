@@ -22,7 +22,7 @@ const rotateDiceAnimation = keyframes`
     transform: rotate3d(1, 1, 0, 180deg);
   }
   100% {
-    transform: rotate3d(1, 1, 0, 0deg);
+    transform: rotate3d(1, 1, 0, 360deg);
   }
 `;
 

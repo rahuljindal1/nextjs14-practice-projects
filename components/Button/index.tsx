@@ -21,7 +21,8 @@ export default function Button({
       className={classNames(
         classes.button,
         size === "large" ? classes.buttonLarge : "",
-        type == "secondary" ? classes.secondary : ""
+        type == "secondary" ? classes.secondary : "",
+        isDisabled ? classes.btnDisabled : ""
       )}
       disabled={isDisabled}
       onClick={onClick}

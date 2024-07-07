@@ -16,12 +16,15 @@ export default function DiceRollSimulator() {
   const [currentRollNumber, setCurrentRollNumber] =
     useState(randomDiceRollNumber);
   const [rollHistory, setRollHistory] = useState<number[]>([]);
-  const [animateDice, setAnimateDice] = useState(true);
+  const [animateDice, setAnimateDice] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const rollDiceClickHandler = () => {
     const currentRoll = randomDiceRollNumber();
+    setIsAnimating(true);
     setAnimateDice(true);
     setTimeout(() => {
+      setIsAnimating(false);
       setCurrentRollNumber(currentRoll);
       setRollHistory([...rollHistory, currentRoll]);
     }, animateDiceConfig.durationInMilliSeconds);
@@ -51,6 +54,7 @@ export default function DiceRollSimulator() {
     if (animateDice) {
       setTimeout(() => {
         setAnimateDice(false);
+        setIsAnimating(false);
       }, animateDiceConfig?.durationInMilliSeconds);
     }
   }, [animateDice]);
@@ -69,6 +73,7 @@ export default function DiceRollSimulator() {
           btnText="Roll Dice"
           onClick={rollDiceClickHandler}
           size="large"
+          isDisabled={isAnimating}
         />
       </div>
       <div className={styles.rollHistoryContainer}>
