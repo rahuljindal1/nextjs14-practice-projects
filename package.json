@@ -13,12 +13,10 @@
     "@emotion/babel-plugin": "^11.11.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@types/styled-components": "^5.1.34",
     "classnames": "^2.5.1",
     "next": "14.2.4",
     "react": "^18",
-    "react-dom": "^18",
-    "styled-components": "^6.1.11"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
