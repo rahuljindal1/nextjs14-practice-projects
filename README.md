@@ -21,4 +21,5 @@ bun dev
 1. Testimonial Finder
 2. Tip Calculator
 3. Age Calculator
-4. Dice Roll Simulator [ In Progress ]
+4. Dice Roll Simulator
+5. Pomodoro Timer [ In Progress ]
