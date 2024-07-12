@@ -17,12 +17,15 @@ export default function RockPaperScissorsGame() {
   >();
   const [message, setMessage] = useState<string>("");
 
-  const cardSelectHandler = (cardType: CardTypeEnum) => {
+  const cardSelectHandler = (humanSelectedCard: CardTypeEnum) => {
     const computerSelectedCard = gameManagerService.getRandomComputerCard();
-    const status = gameManagerService.getStatus(cardType, computerSelectedCard);
+    const status = gameManagerService.getStatus(
+      humanSelectedCard,
+      computerSelectedCard
+    );
     const message = gameManagerService.getMessage(
       status,
-      cardType,
+      humanSelectedCard,
       computerSelectedCard
     );
     setMessage(message);

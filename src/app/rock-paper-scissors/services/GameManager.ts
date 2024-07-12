@@ -1,6 +1,24 @@
 import { CardTypeEnum, GameStatusEnum } from "../enums";
 
 export class GameManagerService {
+  #winMetric: { [key: string]: { [key: string]: GameStatusEnum } } = {
+    [CardTypeEnum.scissors]: {
+      [CardTypeEnum.rock]: GameStatusEnum.loss,
+      [CardTypeEnum.paper]: GameStatusEnum.win,
+      [CardTypeEnum.scissors]: GameStatusEnum.tie
+    },
+    [CardTypeEnum.rock]: {
+      [CardTypeEnum.scissors]: GameStatusEnum.win,
+      [CardTypeEnum.paper]: GameStatusEnum.loss,
+      [CardTypeEnum.rock]: GameStatusEnum.tie
+    },
+    [CardTypeEnum.paper]: {
+      [CardTypeEnum.scissors]: GameStatusEnum.loss,
+      [CardTypeEnum.paper]: GameStatusEnum.tie,
+      [CardTypeEnum.rock]: GameStatusEnum.win
+    }
+  };
+
   public getMessage(
     status: GameStatusEnum,
     humanSelectedCard: CardTypeEnum,
@@ -27,32 +45,6 @@ export class GameManagerService {
     humanSelectedCard: CardTypeEnum,
     computerSelectedCard: CardTypeEnum
   ): GameStatusEnum {
-    if (humanSelectedCard === CardTypeEnum.scissors) {
-      if (computerSelectedCard === CardTypeEnum.rock) {
-        return GameStatusEnum.loss;
-      }
-      if (computerSelectedCard === CardTypeEnum.paper) {
-        return GameStatusEnum.win;
-      }
-      return GameStatusEnum.tie;
-    }
-
-    if (humanSelectedCard === CardTypeEnum.paper) {
-      if (computerSelectedCard === CardTypeEnum.rock) {
-        return GameStatusEnum.win;
-      }
-      if (computerSelectedCard === CardTypeEnum.scissors) {
-        return GameStatusEnum.loss;
-      }
-      return GameStatusEnum.tie;
-    }
-
-    if (computerSelectedCard === CardTypeEnum.paper) {
-      return GameStatusEnum.loss;
-    }
-    if (computerSelectedCard === CardTypeEnum.scissors) {
-      return GameStatusEnum.win;
-    }
-    return GameStatusEnum.tie;
+    return this.#winMetric[humanSelectedCard][computerSelectedCard];
   }
 }
