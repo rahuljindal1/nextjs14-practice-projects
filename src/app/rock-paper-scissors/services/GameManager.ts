@@ -24,14 +24,12 @@ export class GameManagerService {
     humanSelectedCard: CardTypeEnum,
     computerSelectedCard: CardTypeEnum
   ) {
-    if (status == "tie") {
+    if (status == GameStatusEnum.tie) {
       return "It's a tie!";
     }
-
-    if (status === "win") {
+    if (status === GameStatusEnum.win) {
       return `You win! ${humanSelectedCard} beats ${computerSelectedCard}`;
     }
-
     return `You lose! ${computerSelectedCard} beats ${humanSelectedCard}`;
   }
 
