@@ -13,49 +13,7 @@
     margin: 24px;
   }
 
-  .subTitle {
-    font-size: 1.5rem;
-  }
-
-  .gameArea {
-    display: flex;
-    gap: 48px;
-
-    .humanGameArea,
-    .computerGameArea {
-      text-align: center;
-    }
-
-    .actionCards {
-      display: flex;
-      gap: 24px;
-      margin: 12px;
-      margin-bottom: 24px;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-
   .result {
     margin: 12px;
-  }
-
-  .scores {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-  }
-
-  .humanScore,
-  .computerScore {
-    font-size: 1.5rem;
-  }
-
-  .humanScore {
-    color: rgb(33, 49, 223);
-  }
-
-  .computerScore {
-    color: rgb(226, 29, 29);
   }
 }

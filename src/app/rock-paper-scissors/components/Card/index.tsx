@@ -1,11 +1,6 @@
 import classNames from "classnames";
 import styles from "./styles.module.css";
-
-export enum CardTypeEnum {
-  scissors = "scissors",
-  rock = "rock",
-  paper = "paper"
-}
+import { CardTypeEnum } from "../../enums";
 
 const GAME_ITEMS: {
   id: CardTypeEnum;

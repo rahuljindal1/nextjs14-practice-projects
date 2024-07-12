@@ -23,4 +23,4 @@ bun dev
 3. Age Calculator
 4. Dice Roll Simulator
 5. Pomodoro Timer
-6. Rock Paper Scissors Game [ In Progress ]
+6. Rock Paper Scissors Game

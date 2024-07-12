@@ -1,0 +1,22 @@
+.gameArea {
+  display: flex;
+  gap: 48px;
+
+  .humanGameArea,
+  .computerGameArea {
+    text-align: center;
+  }
+
+  .subTitle {
+    font-size: 1.5rem;
+  }
+
+  .actionCards {
+    display: flex;
+    gap: 24px;
+    margin: 12px;
+    margin-bottom: 24px;
+    align-items: center;
+    justify-content: center;
+  }
+}
