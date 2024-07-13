@@ -1,0 +1,31 @@
+.mainContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  font-size: 8rem;
+  font-weight: 600;
+  color: #f92672;
+
+  .timer {
+    width: fit-content;
+  }
+  .timer.active {
+    width: 775px;
+  }
+
+  .btnContainer {
+    display: flex;
+    gap: 36px;
+  }
+
+  .btn {
+    font-size: 2rem;
+    padding: 1.5rem 4rem;
+    background-color: #f92672;
+    border-radius: 36px;
+    font-weight: 600;
+  }
+}

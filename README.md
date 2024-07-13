@@ -24,3 +24,4 @@ bun dev
 4. Dice Roll Simulator
 5. Pomodoro Timer
 6. Rock Paper Scissors Game
+7. Stopwatch
