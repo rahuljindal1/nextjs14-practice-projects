@@ -26,3 +26,4 @@ bun dev
 6. Rock Paper Scissors Game
 7. Stopwatch
 8. Video Trailer
+9. Temperature Converter

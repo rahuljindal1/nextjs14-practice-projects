@@ -9,7 +9,8 @@ const projects = [
   { id: 5, title: "Pomodoro Timer", link: "/pomodoro-timer" },
   { id: 6, title: "Rock Paper Scissors Game", link: "/rock-paper-scissors" },
   { id: 7, title: "Stopwatch", link: "/stopwatch" },
-  { id: 8, title: "Video Tailer", link: "/video-trailer" }
+  { id: 8, title: "Video Tailer", link: "/video-trailer" },
+  { id: 9, title: "Temperature Converter", link: "/temperature-converter" }
 ];
 
 export default function Home() {

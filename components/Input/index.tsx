@@ -4,11 +4,13 @@ import classNames from "classnames";
 
 type Props = {
   name: string;
-  value: string | number;
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  value?: string | number;
   customStyles?: string[];
   label?: string;
   type?: HTMLInputTypeAttribute;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: () => void;
+  onEnter?: () => void;
 };
 
 export default function Input({
@@ -17,7 +19,9 @@ export default function Input({
   onChange,
   name,
   customStyles = [],
-  type = "text"
+  type = "text",
+  onBlur = () => {},
+  onEnter = () => {}
 }: Props) {
   const Label = () => (label ? <label htmlFor={name}>{label}</label> : <></>);
   return (
@@ -26,9 +30,15 @@ export default function Input({
       <input
         name={name}
         value={value}
-        onChange={onChange}
         className={styles.input}
         type={type}
+        onChange={onChange}
+        onBlur={onBlur}
+        onKeyUp={(e) => {
+          if (e.key === "Enter") {
+            onEnter();
+          }
+        }}
       />
     </main>
   );
