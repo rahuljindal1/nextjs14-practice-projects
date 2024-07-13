@@ -25,3 +25,4 @@ bun dev
 5. Pomodoro Timer
 6. Rock Paper Scissors Game
 7. Stopwatch
+8. Video Trailer

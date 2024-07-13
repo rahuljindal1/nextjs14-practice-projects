@@ -1,0 +1,29 @@
+.mainContainer {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 12px;
+    width: 400px;
+    box-shadow: 0 0 20px #007bff47;
+
+    .title {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .btnContainer {
+      width: 100%;
+    }
+  }
+}
+
+.btn {
+  width: 100%;
+}

@@ -8,7 +8,8 @@ const projects = [
   { id: 4, title: "Dice Roll Simulator", link: "/dice-roll-simulator" },
   { id: 5, title: "Pomodoro Timer", link: "/pomodoro-timer" },
   { id: 6, title: "Rock Paper Scissors Game", link: "/rock-paper-scissors" },
-  { id: 7, title: "Stopwatch", link: "/stopwatch" }
+  { id: 7, title: "Stopwatch", link: "/stopwatch" },
+  { id: 8, title: "Video Tailer", link: "/video-trailer" }
 ];
 
 export default function Home() {
