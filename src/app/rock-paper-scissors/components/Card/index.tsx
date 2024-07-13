@@ -26,10 +26,12 @@ const GAME_ITEMS: {
 
 export default function Card({
   cardType,
-  onClick
+  onClick = () => {},
+  size = "normal"
 }: {
   cardType: CardTypeEnum;
-  onClick: (cardType: CardTypeEnum) => void;
+  onClick?: (cardType: CardTypeEnum) => void;
+  size?: "small" | "normal";
 }) {
   const gameItem = GAME_ITEMS.find((item) => item.id === cardType);
 
@@ -39,7 +41,11 @@ export default function Card({
 
   return (
     <div
-      className={classNames(styles.mainContainer, gameItem.customStyles)}
+      className={classNames(
+        styles.mainContainer,
+        gameItem.customStyles,
+        size === "small" ? styles.small : ""
+      )}
       onClick={() => onClick(gameItem.id)}
     >
       {gameItem.symbol}

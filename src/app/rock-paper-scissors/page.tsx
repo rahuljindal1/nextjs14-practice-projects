@@ -6,6 +6,9 @@ import GameArea from "./components/GameArea";
 import GameStats from "./components/GameStats";
 import { GameStatusEnum, CardTypeEnum } from "./enums";
 import { GameManagerService } from "./services";
+import { Button } from "../../../components";
+import MatchUps from "./components/MatchUps";
+import { MatchUpRecord } from "./types/page";
 
 const gameManagerService = new GameManagerService();
 
@@ -16,6 +19,7 @@ export default function RockPaperScissorsGame() {
     CardTypeEnum | undefined
   >();
   const [message, setMessage] = useState<string>("");
+  const [matchUps, setMatchUps] = useState<MatchUpRecord[]>([]);
 
   const cardSelectHandler = (humanSelectedCard: CardTypeEnum) => {
     const computerSelectedCard = gameManagerService.getRandomComputerCard();
@@ -30,6 +34,14 @@ export default function RockPaperScissorsGame() {
     );
     setMessage(message);
     setComputerSelectedCard(computerSelectedCard);
+    setMatchUps([
+      {
+        status,
+        humanCard: humanSelectedCard,
+        computerCard: computerSelectedCard
+      },
+      ...matchUps
+    ]);
 
     if (status === GameStatusEnum.win) {
       setHumanScore((prevState: number) => ++prevState);
@@ -38,6 +50,16 @@ export default function RockPaperScissorsGame() {
       setComputerScore((prevState: number) => ++prevState);
     }
   };
+
+  const reset = () => {
+    setHumanScore(0);
+    setComputerScore(0);
+    setComputerSelectedCard(undefined);
+    setMessage("");
+    setMatchUps([]);
+  };
+
+  console.log(matchUps);
 
   return (
     <div className={styles.mainContainer}>
@@ -48,6 +70,16 @@ export default function RockPaperScissorsGame() {
       />
       {message ? <div className={styles.result}>{message}</div> : <></>}
       <GameStats humanScore={humanScore} computerScore={computerScore} />
+      <div className={styles.btnContainer}>
+        <Button btnText="Restart" onClick={reset} />
+      </div>
+      {matchUps.length !== 0 ? (
+        <div className={styles.matchUpContainer}>
+          <MatchUps matchUps={matchUps} />
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }

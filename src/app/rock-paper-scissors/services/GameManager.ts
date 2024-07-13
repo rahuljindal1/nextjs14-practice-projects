@@ -1,3 +1,4 @@
+import { capitalize } from "lodash";
 import { CardTypeEnum, GameStatusEnum } from "../enums";
 
 export class GameManagerService {
@@ -28,9 +29,9 @@ export class GameManagerService {
       return "It's a tie!";
     }
     if (status === GameStatusEnum.win) {
-      return `You win! ${humanSelectedCard} beats ${computerSelectedCard}`;
+      return `You win! ${capitalize(humanSelectedCard)} beats ${capitalize(computerSelectedCard)}`;
     }
-    return `You lose! ${computerSelectedCard} beats ${humanSelectedCard}`;
+    return `You lose! ${capitalize(computerSelectedCard)} beats ${capitalize(humanSelectedCard)}`;
   }
 
   public getRandomComputerCard(): CardTypeEnum {

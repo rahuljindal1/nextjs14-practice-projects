@@ -6,14 +6,20 @@
   padding: 12px;
   font-size: 1.25rem;
   font-weight: 700;
+  gap: 12px;
 
   .title {
     font-size: 2.5rem;
     font-weight: 600;
-    margin: 24px;
+    margin: 12px;
   }
 
-  .result {
-    margin: 12px;
+  .btnContainer {
+    margin-top: 12px;
+  }
+
+  .matchUpContainer {
+    margin-top: 24px;
+    min-width: 50%;
   }
 }

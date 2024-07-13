@@ -1,0 +1,46 @@
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: antiquewhite;
+  padding: 18px 36px 18px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+
+  .infoSection {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .gameTurn {
+      border-radius: 8px;
+      border: 2px solid white;
+      background-color: white;
+      padding: 8px 12px;
+    }
+  }
+
+  .cardsSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+
+    .swordIcon {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.winner {
+  background-color: #e0fbdc;
+}
+
+.loser {
+  background-color: #f4d3d3;
+}
+
+.draw {
+  background-color: rgba(0, 0, 0, 0.09);
+}
