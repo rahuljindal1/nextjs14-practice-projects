@@ -27,3 +27,4 @@ bun dev
 7. Stopwatch
 8. Video Trailer
 9. Temperature Converter
+10. Dynamic Tab View

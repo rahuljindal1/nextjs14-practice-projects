@@ -10,7 +10,8 @@ const projects = [
   { id: 6, title: "Rock Paper Scissors Game", link: "/rock-paper-scissors" },
   { id: 7, title: "Stopwatch", link: "/stopwatch" },
   { id: 8, title: "Video Tailer", link: "/video-trailer" },
-  { id: 9, title: "Temperature Converter", link: "/temperature-converter" }
+  { id: 9, title: "Temperature Converter", link: "/temperature-converter" },
+  { id: 9, title: "Tab View", link: "/tab-view" }
 ];
 
 export default function Home() {
