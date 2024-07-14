@@ -2,24 +2,44 @@ import classNames from "classnames";
 import styles from "./styles.module.css";
 
 type Props = {
-  btnText: string;
+  btnText?: string;
+  btnIcon?: React.ReactNode;
   onClick: () => void;
   customStyles?: string[];
   isDisabled?: boolean;
   size?: "small" | "normal" | "large";
   type?: "primary" | "secondary";
+  btnIconPosition?: "start" | "end";
 };
 
 export default function Button({
   btnText,
+  btnIcon,
   onClick,
   customStyles = [],
   isDisabled = false,
   size = "normal",
-  type = "primary"
+  type = "primary",
+  btnIconPosition = "start"
 }: Props) {
+  const ButtonIcon = () => {
+    if (!btnIcon) {
+      return <></>;
+    }
+
+    return <div className={styles.btnIcon}>{btnIcon}</div>;
+  };
+
+  const ButtonTxt = () => {
+    if (!btnText) {
+      return <></>;
+    }
+
+    return <div className={styles.btnText}>{btnText}</div>;
+  };
+
   return (
-    <button
+    <div
       className={classNames(
         styles.button,
         size === "large" ? styles.buttonLarge : "",
@@ -27,10 +47,11 @@ export default function Button({
         isDisabled ? styles.btnDisabled : "",
         customStyles
       )}
-      disabled={isDisabled}
       onClick={onClick}
     >
-      {btnText}
-    </button>
+      {btnIconPosition === "start" && <ButtonIcon />}
+      <ButtonTxt />
+      {btnIconPosition === "end" && <ButtonIcon />}
+    </div>
   );
 }

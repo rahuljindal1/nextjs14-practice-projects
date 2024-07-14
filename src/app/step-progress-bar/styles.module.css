@@ -1,0 +1,14 @@
+.mainContainer {
+  height: 95vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  font-family: cursive;
+
+  .controls {
+    display: flex;
+    gap: 24px;
+  }
+}
