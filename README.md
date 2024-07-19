@@ -28,4 +28,4 @@ bun dev
 8. Video Trailer
 9. Temperature Converter
 10. Dynamic Tab View
-11. Step Progress Bar [ In Progress ]
+11. Step Progress Bar
