@@ -1,0 +1,43 @@
+.divider {
+  width: 72px;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.398);
+  margin-top: 18px;
+  position: relative;
+}
+
+.dividerOverlayForward {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background-color: green;
+  animation: loading-forward 0.5s forwards;
+}
+
+.dividerOverlayBackward {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background-color: green;
+  animation: loading-backward 0.5s forwards;
+}
+
+@keyframes loading-forward {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 72px;
+  }
+}
+
+@keyframes loading-backward {
+  from {
+    width: 72px;
+  }
+  to {
+    width: 0px;
+  }
+}

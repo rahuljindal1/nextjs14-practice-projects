@@ -1,41 +1,4 @@
 .mainContainer {
   display: flex;
   align-items: start;
-
-  .stepIndicator {
-    max-width: 38px;
-    text-align: center;
-
-    .activeStep {
-      font-size: 1.25rem;
-      padding: 6px;
-      border: 4px solid green;
-      border-radius: 100%;
-      color: green;
-    }
-
-    .notActiveStep {
-      font-size: 1.25rem;
-      padding: 6px;
-      border: 4px solid rgba(0, 0, 0, 0.398);
-      border-radius: 100%;
-      color: rgba(0, 0, 0, 0.398);
-    }
-
-    .description {
-      font-size: 0.75rem;
-    }
-  }
-
-  .divider {
-    width: 72px;
-    height: 4px;
-    background-color: rgba(0, 0, 0, 0.398);
-    margin-top: 18px;
-    transition: all 2s ease-in-out;
-
-    &.active {
-      background-color: green;
-    }
-  }
 }
