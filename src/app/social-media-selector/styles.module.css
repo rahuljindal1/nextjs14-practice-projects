@@ -1,0 +1,87 @@
+.mainContainer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  background: linear-gradient(135deg, purple 20%, orange 80%);
+}
+
+.selectorContainer,
+.optionsContainer {
+  padding: 10px 20px;
+  width: 280px;
+  border-radius: 4px;
+  background-color: lightgray;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.selectorContainer {
+  margin-top: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selectedOption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.optionsContainer {
+  padding: 10px 10px;
+  width: 300px;
+}
+
+.optionWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 10px;
+  border-radius: 4px;
+  transition: padding 0.2s ease-in;
+
+  &:hover {
+    background: rgba(128, 128, 128, 0.76);
+    padding-left: 24px;
+  }
+}
+
+.facebookIcon,
+.twitterIcon,
+.linkedinIcon {
+  color: blue;
+}
+
+.youtubeIcon {
+  color: red;
+}
+
+.chevronDown {
+  animation: chevron-down 0.25s forwards;
+}
+
+.chevronUp {
+  /* rotate: 180deg; */
+  animation: chevron-up 0.25s forwards;
+}
+
+@keyframes chevron-down {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 180deg;
+  }
+}
+
+@keyframes chevron-up {
+  from {
+    rotate: 180deg;
+  }
+  to {
+    rotate: 0deg;
+  }
+}
