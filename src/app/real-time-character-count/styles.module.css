@@ -34,11 +34,12 @@
       .maxCharacterContainer {
         color: blue;
         font-size: 1.4rem;
+        font-weight: 600;
       }
 
       .remainingCharacterContainer {
-        color: red;
         font-size: 1.4rem;
+        font-weight: 600;
       }
     }
   }

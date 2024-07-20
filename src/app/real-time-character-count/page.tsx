@@ -2,9 +2,9 @@
 
 import { ChangeEvent, useState } from "react";
 import styles from "./styles.module.css";
-import { TextArea } from "../../../components";
+import { ColorTransition, TextArea } from "../../../components";
 
-const MAX_CHARACTER_LENGTH = 500;
+const MAX_CHARACTER_LENGTH = 50;
 
 export default function RealTimeCharacterCount() {
   const [remainingCharacters, setRemainingCharacter] =
@@ -18,6 +18,11 @@ export default function RealTimeCharacterCount() {
     const remainingCharacters = MAX_CHARACTER_LENGTH - inputLength;
     setRemainingCharacter(remainingCharacters);
   };
+
+  const colorTransitionScale = (
+    (MAX_CHARACTER_LENGTH - remainingCharacters) /
+    MAX_CHARACTER_LENGTH
+  ).toPrecision(2);
 
   return (
     <div className={styles.mainContainer}>
@@ -39,7 +44,13 @@ export default function RealTimeCharacterCount() {
           <div className={styles.remainingCharacterSection}>
             Remaining:{" "}
             <span className={styles.remainingCharacterContainer}>
-              {remainingCharacters}
+              {
+                <ColorTransition
+                  content={remainingCharacters}
+                  colors={["green", "yellow", "red"]}
+                  scale={Number(colorTransitionScale)}
+                />
+              }
             </span>
           </div>
         </div>

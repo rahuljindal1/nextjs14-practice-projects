@@ -13,6 +13,7 @@
     "@emotion/babel-plugin": "^11.11.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "chroma-js": "^2.4.2",
     "classnames": "^2.5.1",
     "lodash": "^4.17.21",
     "next": "14.2.4",
@@ -21,6 +22,7 @@
     "react-icons": "^5.2.1"
   },
   "devDependencies": {
+    "@types/chroma-js": "^2.4.4",
     "@types/lodash": "^4.17.6",
     "@types/node": "^20",
     "@types/react": "^18.3.3",
