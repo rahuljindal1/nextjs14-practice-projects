@@ -31,3 +31,4 @@ bun dev
 11. Step Progress Bar
 12. Social Media Selector
 13. Sidebar
+14. Real Time Character Count

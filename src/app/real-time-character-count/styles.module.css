@@ -1,0 +1,45 @@
+.mainContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: salmon;
+  font-family: cursive;
+  font-family: 1.5rem;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: lightpink;
+    border-radius: 8px;
+    padding: 2.5rem 1.5rem;
+    width: 30%;
+    gap: 1.5rem;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.48);
+
+    .mainHeading {
+      font-size: 1.75rem;
+      font-weight: bold;
+    }
+
+    .statsSection {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      color: rgba(0, 0, 0, 0.542);
+
+      .maxCharacterContainer {
+        color: blue;
+        font-size: 1.4rem;
+      }
+
+      .remainingCharacterContainer {
+        color: red;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
