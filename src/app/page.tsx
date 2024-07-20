@@ -12,7 +12,8 @@ const projects = [
   { id: 8, title: "Video Tailer", link: "/video-trailer" },
   { id: 9, title: "Temperature Converter", link: "/temperature-converter" },
   { id: 10, title: "Tab View", link: "/tab-view" },
-  { id: 11, title: "Step Progress Bar", link: "/step-progress-bar" }
+  { id: 11, title: "Step Progress Bar", link: "/step-progress-bar" },
+  { id: 12, title: "Social Media Selector", link: "/social-media-selector" }
 ];
 
 export default function Home() {
