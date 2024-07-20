@@ -1,0 +1,36 @@
+.hamburgerIcon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 2.5rem;
+  color: red;
+  cursor: pointer;
+}
+
+.mainContainer {
+  height: 100vh;
+  display: flex;
+  background: lightgray;
+}
+
+.mainSection {
+  position: relative;
+  width: 100%;
+  background: lightgray;
+  transition: width 1s ease;
+}
+
+.sidebar {
+  width: 0%;
+  background: white;
+  transition: width 1s ease;
+}
+
+.sidebarOpen {
+  width: 25%;
+  background: white;
+}
+
+.mainSectionOnSidebarOpen {
+  width: 75%;
+}

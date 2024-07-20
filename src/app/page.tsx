@@ -13,7 +13,8 @@ const projects = [
   { id: 9, title: "Temperature Converter", link: "/temperature-converter" },
   { id: 10, title: "Tab View", link: "/tab-view" },
   { id: 11, title: "Step Progress Bar", link: "/step-progress-bar" },
-  { id: 12, title: "Social Media Selector", link: "/social-media-selector" }
+  { id: 12, title: "Social Media Selector", link: "/social-media-selector" },
+  { id: 13, title: "Sidebar", link: "/sidebar" }
 ];
 
 export default function Home() {

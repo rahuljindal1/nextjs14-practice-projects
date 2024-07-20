@@ -30,3 +30,4 @@ bun dev
 10. Dynamic Tab View
 11. Step Progress Bar
 12. Social Media Selector
+13. Sidebar
