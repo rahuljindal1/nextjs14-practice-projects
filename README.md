@@ -32,3 +32,4 @@ bun dev
 12. Social Media Selector
 13. Sidebar
 14. Real Time Character Count
+15. Random Password Generator

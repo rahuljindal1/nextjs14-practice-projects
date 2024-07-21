@@ -1,0 +1,38 @@
+.mainContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  gap: 24px;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.passwordSection {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(211, 211, 211, 0.418);
+  border-radius: 4px;
+  font-size: 1.25rem;
+}
+
+.passwordContent {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.btn {
+  width: fit-content;
+}
+
+.icon {
+  cursor: pointer;
+}

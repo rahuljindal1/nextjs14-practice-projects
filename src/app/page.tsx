@@ -16,9 +16,14 @@ const projects = [
   { id: 12, title: "Social Media Selector", link: "/social-media-selector" },
   { id: 13, title: "Sidebar", link: "/sidebar" },
   {
-    id: 13,
+    id: 14,
     title: "Real Time Character Count",
     link: "/real-time-character-count"
+  },
+  {
+    id: 15,
+    title: "Random Password Generator",
+    link: "/random-password-generator"
   }
 ];
 
