@@ -24,6 +24,11 @@ const projects = [
     id: 15,
     title: "Random Password Generator",
     link: "/random-password-generator"
+  },
+  {
+    id: 15,
+    title: "Q & A Section",
+    link: "/q-and-a-section"
   }
 ];
 
