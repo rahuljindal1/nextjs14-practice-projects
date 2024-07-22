@@ -20,7 +20,6 @@ export default function QAndASection() {
         data.isCollapsed = isCollapsed;
       }
     });
-    console.log({ dataset, index, isCollapsed });
     setDataset([...dataset]);
   };
 
