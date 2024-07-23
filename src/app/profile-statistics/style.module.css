@@ -1,0 +1,37 @@
+.mainContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  background-color: aquamarine;
+  font-family: cursive;
+}
+
+.profileContainer {
+  border: 2px dashed red;
+  border-width: thin;
+  padding: 1.75rem 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  top: -42px;
+  font-size: 4.5rem;
+}
+
+.stats {
+  font-size: 4rem;
+  color: red;
+  width: 156px;
+  text-align: center;
+}
+
+.statTitle {
+  font-weight: 800;
+}

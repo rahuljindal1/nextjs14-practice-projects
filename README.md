@@ -34,3 +34,4 @@ bun dev
 14. Real Time Character Count
 15. Random Password Generator
 16. Q&A Section
+17. Profile Statistics
