@@ -35,3 +35,4 @@ bun dev
 15. Random Password Generator
 16. Q&A Section
 17. Profile Statistics
+18. Note App [ In Progress ]
