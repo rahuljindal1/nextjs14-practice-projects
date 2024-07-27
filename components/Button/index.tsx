@@ -6,6 +6,7 @@ type Props = {
   btnIcon?: React.ReactNode;
   onClick: () => void;
   customStyles?: string[];
+  iconStyles?: string[];
   isDisabled?: boolean;
   size?: "small" | "normal" | "large";
   type?: "primary" | "secondary";
@@ -17,6 +18,7 @@ export default function Button({
   btnIcon,
   onClick,
   customStyles = [],
+  iconStyles = [],
   isDisabled = false,
   size = "normal",
   type = "primary",
@@ -27,7 +29,9 @@ export default function Button({
       return <></>;
     }
 
-    return <div className={styles.btnIcon}>{btnIcon}</div>;
+    return (
+      <div className={classNames(styles.btnIcon, iconStyles)}>{btnIcon}</div>
+    );
   };
 
   const ButtonTxt = () => {

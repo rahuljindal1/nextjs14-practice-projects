@@ -34,7 +34,8 @@ const projects = [
     id: 17,
     title: "Profile Statistics",
     link: "/profile-statistics"
-  }
+  },
+  { id: 18, title: "Note App", link: "/note-app" }
 ];
 
 export default function Home() {
