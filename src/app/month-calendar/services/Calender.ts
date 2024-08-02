@@ -6,43 +6,42 @@ export class CalenderService {
   }
 
   public get todayDisplayDate() {
-    const currentDate = new Date();
-    const currentShortMonth = currentDate.toLocaleString("default", {
-      month: "short"
-    });
-    const todayDate = currentDate.getDate();
-    const currentYear = currentDate.getFullYear();
-    const todayDay = this.#WEEK_DAYS_NAMES[currentDate.getDay() - 1];
+    const today = new Date();
+    const dayName = this.#WEEK_DAYS_NAMES[today.getDay() - 1];
+    const shortMonth = today.toLocaleString("default", { month: "short" });
+    const date = today.getDate();
+    const year = today.getFullYear();
 
-    return `${todayDay} ${currentShortMonth} ${todayDate} ${currentYear}`;
+    return `${dayName} ${shortMonth} ${date} ${year}`;
   }
 
   public get getCurrentMonthDates() {
-    const currentDate = new Date();
-    const currentYear = currentDate.getFullYear();
-    const currentMonth = currentDate.getMonth();
-    const totalDaysInCurrentMonth = this.getTotalDaysInCurrentMonth();
-    const allPossibleDates = Array(42).fill(0);
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = today.getMonth();
+    const totalDays = this.getTotalDaysInCurrentMonth();
+    const dates = Array(42).fill(0);
 
-    const startDate = new Date(currentYear, currentMonth, 1);
-    const startDayIndex = startDate.getDay();
-    for (let i = startDayIndex - 1; i <= totalDaysInCurrentMonth; i++) {
-      allPossibleDates[i] = i - startDayIndex + 2;
+    const startDayIndex = new Date(year, month, 1).getDay() - 1;
+
+    for (let i = startDayIndex; i < startDayIndex + totalDays; i++) {
+      dates[i] = i - startDayIndex + 1;
     }
 
-    return allPossibleDates;
+    return dates;
   }
 
   private getTotalDaysInCurrentMonth() {
-    const currentDate = new Date();
-    const currentYear = currentDate.getFullYear();
-    const currentMonth = currentDate.getMonth();
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = today.getMonth();
 
-    const nextMonthStartDate = new Date(currentYear, currentMonth + 1, 1);
-    const currentMonthStartDate = new Date(currentYear, currentMonth, 1);
-    const numberOfDays =
-      (nextMonthStartDate.getTime() - currentMonthStartDate.getTime()) /
-      (1000 * 60 * 60 * 24);
-    return numberOfDays;
+    const nextMonthStart = new Date(year, month + 1, 1);
+    const currentMonthStart = new Date(year, month, 1);
+
+    return (
+      (nextMonthStart.getTime() - currentMonthStart.getTime()) /
+      (1000 * 60 * 60 * 24)
+    );
   }
 }
