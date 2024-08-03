@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metaData: Metadata = {
-  title: "Month Calender",
-  description: "Month Calender"
+  title: "Mini Calender",
+  description: "Mini Calender"
 };
 
 export default function Layout({
@@ -10,5 +10,5 @@ export default function Layout({
 }: {
   children: Readonly<React.ReactNode>;
 }) {
-  return <>{children}</>;
+  return <div>{children}</div>;
 }
