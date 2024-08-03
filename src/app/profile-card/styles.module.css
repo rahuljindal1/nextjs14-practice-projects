@@ -1,0 +1,100 @@
+.mainContainer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileCard {
+  width: 320px;
+  border-radius: 48px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+  .imageContainer {
+    height: 216px;
+    background-image: url("/images/profile-background.png");
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .image {
+      border-radius: 100%;
+      margin: 1rem;
+    }
+  }
+
+  .infoContainer {
+    width: 100%;
+    padding: 1rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+    box-sizing: border-box;
+
+    .nameContainer {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      font-weight: 500;
+
+      .name {
+        font-size: 2rem;
+      }
+
+      .username {
+        color: gray;
+        font-size: 0.75rem;
+      }
+    }
+
+    .socialSitesContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.25rem;
+      cursor: pointer;
+    }
+
+    .description {
+      padding: 0rem 2rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .actionBtnsContainer {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      align-items: center;
+
+      .button {
+        width: 112px;
+        height: 36px;
+        border-radius: 54px;
+        padding: 10px;
+        text-align: center;
+        border: none;
+        font-size: 0.8rem;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .followBtn {
+        background-color: #da4ca1;
+        color: white;
+      }
+
+      .messageBtn {
+        border: 2px solid rgba(128, 128, 128, 0.5);
+        color: rgba(128, 128, 128, 0.5);
+        background-color: white;
+      }
+    }
+  }
+}
