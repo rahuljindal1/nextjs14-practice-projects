@@ -38,7 +38,8 @@ const projects = [
   { id: 18, title: "Note App", link: "/note-app" },
   { id: 19, title: "Month Calendar", link: "/month-calendar" },
   { id: 20, title: "Mini Calendar", link: "/mini-calender" },
-  { id: 21, title: "Loading Bar", link: "/loading-bar" }
+  { id: 21, title: "Loading Bar", link: "/loading-bar" },
+  { id: 22, title: "Profile Card", link: "/profile-card" }
 ];
 
 export default function Home() {

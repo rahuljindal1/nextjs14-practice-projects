@@ -39,3 +39,4 @@ bun dev
 19. Month Calendar
 20. Mini Calender
 21. Loading Bar
+22. Profile Card [ In Progress ]
