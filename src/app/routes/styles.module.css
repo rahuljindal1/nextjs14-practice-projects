@@ -29,7 +29,7 @@
     background-color: rgb(41, 139, 106);
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     border-radius: 8px;
     padding: 1rem 1.25rem;
     gap: 1rem;
@@ -57,20 +57,35 @@
       }
     }
 
-    &:hover {
+    .actionIcon {
       background-color: white;
+      color: rgb(41, 139, 106);
+      padding: 0.25rem 0.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      font-weight: 800;
+      text-align: center;
+    }
+  }
 
-      .itemInfoContainer {
-        .itemText {
-          color: rgb(41, 139, 106);
-          text-decoration: underline;
-        }
+  .projectListItem:hover {
+    background-color: white;
 
-        .itemCount {
-          background-color: rgb(41, 139, 106);
-          color: white;
-        }
+    .itemInfoContainer {
+      .itemText {
+        color: rgb(41, 139, 106);
+        text-decoration: underline;
       }
+
+      .itemCount {
+        background-color: rgb(41, 139, 106);
+        color: white;
+      }
+    }
+
+    .actionIcon {
+      background-color: rgb(41, 139, 106);
+      color: white;
     }
   }
 }
