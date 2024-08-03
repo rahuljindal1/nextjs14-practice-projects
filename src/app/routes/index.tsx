@@ -1,12 +1,12 @@
 "use client";
 
-import Link from "next/link";
 import styles from "./styles.module.css";
 import { PROJECTS } from "./data";
-import { LuPin, LuPinOff } from "react-icons/lu";
-import { Tooltip } from "../../../components";
 import { KEY_NAMES, LocalForageService } from "../../../services";
 import { useEffect, useState } from "react";
+import ProjectItem from "./ProjectItem";
+import { isArray } from "lodash";
+import { Project } from "./interface";
 
 const localForageService = new LocalForageService();
 
@@ -19,6 +19,7 @@ export default function Routes() {
   const [pinnedProjectIds, setPinnedProjectIds] = useState<number[]>(
     savedPinnedProjectIds
   );
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const pinToTop = (e: any, id: number) => {
     e.preventDefault();
@@ -39,12 +40,65 @@ export default function Routes() {
     );
   };
 
+  const unPin = (e: any, id: number) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (pinnedProjectIds.length === 0) {
+      return;
+    }
+    if (!pinnedProjectIds.includes(id)) {
+      return;
+    }
+
+    const newPinnedProjectIds = pinnedProjectIds.filter(
+      (pinnedId) => pinnedId !== id
+    );
+    setPinnedProjectIds(newPinnedProjectIds);
+    localForageService.setItem(
+      KEY_NAMES.PINNED_PROJECT_IDS,
+      newPinnedProjectIds
+    );
+  };
+
+  const isPinned = (projectId: number) =>
+    pinnedProjectIds &&
+    isArray(pinnedProjectIds) &&
+    pinnedProjectIds.includes(projectId);
+
+  const PinnedItems = () => {
+    if (isLoading) {
+      return <></>;
+    }
+
+    return (
+      <div className={styles.projectList}>
+        {pinnedProjectIds.map((id) => {
+          const project = PROJECTS.find(
+            (project) => project.id === id
+          ) as Project;
+
+          return (
+            <ProjectItem
+              isPinned
+              key={project.id}
+              project={project}
+              pinToTop={pinToTop}
+              unPin={unPin}
+            />
+          );
+        })}
+      </div>
+    );
+  };
+
   useEffect(() => {
     const loadPinnedProjectIds = async () => {
       const pinnedIds =
         ((await localForageService.getItem(
           KEY_NAMES.PINNED_PROJECT_IDS
         )) as unknown as number[]) || [];
+      setIsLoading(false);
       setPinnedProjectIds(pinnedIds);
     };
 
@@ -54,25 +108,22 @@ export default function Routes() {
   return (
     <main className={styles.main}>
       <h1 className={styles.title}>Next.js Projects</h1>
-      <div className={styles.projectList}>
-        {PROJECTS.map((project, index) => (
-          <Link
-            key={project.id}
-            className={styles.projectListItem}
-            href={project.link}
-          >
-            <div className={styles.itemInfoContainer}>
-              <div className={styles.itemCount}>{index + 1}</div>
-              <div className={styles.itemText}>{project.title}</div>
-            </div>
-            <div className={styles.actionIcon}>
-              <Tooltip text="Pin To Top">
-                {<LuPin onClick={(e) => pinToTop(e, project.id)} />}
-              </Tooltip>
-            </div>
-          </Link>
-        ))}
-      </div>
+      <PinnedItems />
+      {!isLoading && (
+        <div className={styles.projectList}>
+          {PROJECTS.map(
+            (project) =>
+              !isPinned(project.id) && (
+                <ProjectItem
+                  key={project.id}
+                  project={project}
+                  pinToTop={pinToTop}
+                  unPin={unPin}
+                />
+              )
+          )}
+        </div>
+      )}
     </main>
   );
 }
