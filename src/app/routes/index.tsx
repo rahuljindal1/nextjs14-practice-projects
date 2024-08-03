@@ -8,6 +8,8 @@ import ProjectItem from "./ProjectItem";
 import { isArray } from "lodash";
 import { Project } from "./interface";
 
+const MAX_PINS = 3;
+
 const localForageService = new LocalForageService();
 
 const savedPinnedProjectIds =
@@ -119,6 +121,7 @@ export default function Routes() {
                   project={project}
                   pinToTop={pinToTop}
                   unPin={unPin}
+                  isMaxItemsPinned={pinnedProjectIds.length === MAX_PINS}
                 />
               )
           )}
