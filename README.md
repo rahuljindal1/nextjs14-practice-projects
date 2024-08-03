@@ -41,3 +41,4 @@ bun dev
 21. Loading Bar
 22. Profile Card
 23. Image Slider
+24. Heart Trail Animation [ In Progress ]

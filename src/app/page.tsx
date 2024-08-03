@@ -41,7 +41,8 @@ const projects = [
   { id: 20, title: "Mini Calendar", link: "/mini-calender" },
   { id: 21, title: "Loading Bar", link: "/loading-bar" },
   { id: 22, title: "Profile Card", link: "/profile-card" },
-  { id: 23, title: "Image Slider", link: "/image-slider" }
+  { id: 23, title: "Image Slider", link: "/image-slider" },
+  { id: 24, title: "Heart Trail Animation", link: "/heart-trail-animation" }
 ];
 
 export default function Home() {
