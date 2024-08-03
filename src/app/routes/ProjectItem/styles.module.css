@@ -42,10 +42,9 @@
     text-align: center;
 
     .icon {
-      margin: 0.25rem 0.5rem;
+      padding: 0.25rem 0.5rem;
     }
     .markIconDisabled {
-      cursor: not-allowed;
       opacity: 0.3;
     }
   }
