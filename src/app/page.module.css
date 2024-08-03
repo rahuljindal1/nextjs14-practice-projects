@@ -24,7 +24,6 @@
 
   .projectListItem {
     font-size: 20px;
-    list-style: none;
     width: 25%;
     text-align: center;
     background-color: rgb(41, 139, 106);
@@ -35,6 +34,7 @@
     padding: 1rem 1.25rem;
     gap: 1rem;
     cursor: pointer;
+    text-decoration: none;
 
     .itemCount {
       color: rgb(41, 139, 106);

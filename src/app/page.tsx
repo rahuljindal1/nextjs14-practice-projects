@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
@@ -46,29 +44,25 @@ const projects = [
 ];
 
 export default function Home() {
-  const router = useRouter();
-
   const onItemClick = (url: string) => {
-    router.push(url);
+    window.location.href = url;
   };
 
   return (
     <main className={styles.main}>
       <h1 className={styles.title}>Next.js Projects</h1>
-      <ol className={styles.projectList}>
+      <div className={styles.projectList}>
         {projects.map((project, index) => (
-          <li
-            onClick={() => onItemClick(project.link)}
+          <Link
             key={project.id}
             className={styles.projectListItem}
+            href={project.link}
           >
             <div className={styles.itemCount}>{index + 1}</div>
-            <Link className={styles.itemText} href={project.link}>
-              {project.title}
-            </Link>
-          </li>
+            <div className={styles.itemText}>{project.title}</div>
+          </Link>
         ))}
-      </ol>
+      </div>
     </main>
   );
 }
