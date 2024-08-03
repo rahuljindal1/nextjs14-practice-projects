@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import styles from "./page.module.css";
+import { useRouter } from "next/navigation";
 
 const projects = [
   { id: 1, title: "Testimonial Slider", link: "/testimonial" },
@@ -43,12 +46,26 @@ const projects = [
 ];
 
 export default function Home() {
+  const router = useRouter();
+
+  const onItemClick = (url: string) => {
+    router.push(url);
+  };
+
   return (
     <main className={styles.main}>
+      <h1 className={styles.title}>Next.js Projects</h1>
       <ol className={styles.projectList}>
-        {projects.map((project) => (
-          <li key={project.id} className={styles.projectListItem}>
-            <Link href={project.link}>{project.title}</Link>
+        {projects.map((project, index) => (
+          <li
+            onClick={() => onItemClick(project.link)}
+            key={project.id}
+            className={styles.projectListItem}
+          >
+            <div className={styles.itemCount}>{index + 1}</div>
+            <Link className={styles.itemText} href={project.link}>
+              {project.title}
+            </Link>
           </li>
         ))}
       </ol>
