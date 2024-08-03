@@ -27,10 +27,7 @@ export default function Routes() {
     e.preventDefault();
     e.stopPropagation();
 
-    if (pinnedProjectIds.length === 3) {
-      return;
-    }
-    if (pinnedProjectIds.includes(id)) {
+    if (pinnedProjectIds.length === 3 || pinnedProjectIds.includes(id)) {
       return;
     }
 
@@ -46,10 +43,7 @@ export default function Routes() {
     e.preventDefault();
     e.stopPropagation();
 
-    if (pinnedProjectIds.length === 0) {
-      return;
-    }
-    if (!pinnedProjectIds.includes(id)) {
+    if (pinnedProjectIds.length === 0 || !pinnedProjectIds.includes(id)) {
       return;
     }
 
@@ -99,6 +93,29 @@ export default function Routes() {
     );
   };
 
+  const ProjectItems = () => {
+    if (isLoading) {
+      return <></>;
+    }
+
+    return (
+      <div className={styles.projectList}>
+        {PROJECTS.map(
+          (project) =>
+            !isPinned(project.id) && (
+              <ProjectItem
+                key={project.id}
+                project={project}
+                pinToTop={pinToTop}
+                unPin={unPin}
+                isMaxItemsPinned={pinnedProjectIds.length === MAX_PINS}
+              />
+            )
+        )}
+      </div>
+    );
+  };
+
   useEffect(() => {
     const loadPinnedProjectIds = async () => {
       const pinnedIds =
@@ -116,22 +133,7 @@ export default function Routes() {
     <main className={styles.main}>
       <h1 className={styles.title}>Next.js Projects</h1>
       <PinnedItems />
-      {!isLoading && (
-        <div className={styles.projectList}>
-          {PROJECTS.map(
-            (project) =>
-              !isPinned(project.id) && (
-                <ProjectItem
-                  key={project.id}
-                  project={project}
-                  pinToTop={pinToTop}
-                  unPin={unPin}
-                  isMaxItemsPinned={pinnedProjectIds.length === MAX_PINS}
-                />
-              )
-          )}
-        </div>
-      )}
+      <ProjectItems />
     </main>
   );
 }
