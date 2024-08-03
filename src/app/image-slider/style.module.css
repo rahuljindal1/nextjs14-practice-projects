@@ -1,0 +1,23 @@
+.mainContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5deb3;
+}
+
+.sliderContainer {
+  position: relative;
+  height: 300px;
+  width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  display: flex;
+  overflow: hidden;
+}
+
+.image {
+  /* border-radius: 12px; */
+  min-width: 100%;
+  transition: all 0.75s ease-in-out;
+}

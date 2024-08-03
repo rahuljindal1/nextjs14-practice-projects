@@ -40,3 +40,4 @@ bun dev
 20. Mini Calender
 21. Loading Bar
 22. Profile Card
+23. Image Slider

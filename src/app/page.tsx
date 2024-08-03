@@ -40,7 +40,8 @@ const projects = [
   { id: 19, title: "Month Calendar", link: "/month-calendar" },
   { id: 20, title: "Mini Calendar", link: "/mini-calender" },
   { id: 21, title: "Loading Bar", link: "/loading-bar" },
-  { id: 22, title: "Profile Card", link: "/profile-card" }
+  { id: 22, title: "Profile Card", link: "/profile-card" },
+  { id: 23, title: "Image Slider", link: "/image-slider" }
 ];
 
 export default function Home() {
