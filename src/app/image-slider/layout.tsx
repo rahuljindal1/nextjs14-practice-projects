@@ -1,14 +1,14 @@
 import { Metadata } from "next";
 
-export const metaData: Metadata = {
+export const metadata: Metadata = {
   title: "Image Slider",
   description: "Image Slider"
 };
 
-export default function Layout({
+export default function layout({
   children
 }: {
   children: Readonly<React.ReactNode>;
 }) {
-  return <div>{children}</div>;
+  return <>{children}</>;
 }
