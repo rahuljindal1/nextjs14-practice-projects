@@ -9,7 +9,7 @@
 
   .title {
     padding: 0;
-    margin: 2rem 2rem 1rem;
+    margin: 32px 32px 16px;
     font-size: 2.5rem;
     color: rgb(20, 97, 71);
   }
@@ -29,7 +29,7 @@
     background-color: rgb(41, 139, 106);
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     border-radius: 8px;
     padding: 1rem 1.25rem;
     gap: 1rem;

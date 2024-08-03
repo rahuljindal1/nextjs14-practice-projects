@@ -44,10 +44,6 @@ const projects = [
 ];
 
 export default function Home() {
-  const onItemClick = (url: string) => {
-    window.location.href = url;
-  };
-
   return (
     <main className={styles.main}>
       <h1 className={styles.title}>Next.js Projects</h1>
