@@ -15,7 +15,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <header>Back</header>
       <body className={inter.className} style={{ padding: 0, margin: 0 }}>
         {children}
       </body>
