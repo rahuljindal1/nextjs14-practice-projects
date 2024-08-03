@@ -5,3 +5,4 @@ export { default as StepProgressBar } from "./StepProgressBar";
 export { default as TabBar } from "./Tabs";
 export { default as TextArea } from "./Textarea";
 export { default as ColorTransition } from "./ColorTransition";
+export { default as Tooltip } from "./Tooltip";
