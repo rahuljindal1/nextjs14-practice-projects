@@ -69,7 +69,12 @@ export default function Routes() {
     pinnedProjectIds.includes(projectId);
 
   const PinnedItems = () => {
-    if (isLoading) {
+    if (
+      isLoading ||
+      !pinnedProjectIds ||
+      !isArray(pinnedProjectIds) ||
+      pinnedProjectIds.length === 0
+    ) {
       return <></>;
     }
 
