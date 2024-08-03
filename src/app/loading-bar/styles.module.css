@@ -1,0 +1,46 @@
+.mainContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-family: cursive;
+  font-size: 2rem;
+}
+
+.loaderContainer {
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.loader {
+  position: relative;
+  width: 400px;
+  background-color: white;
+  height: 8px;
+  border-radius: 20px;
+}
+
+.loaderOverlay {
+  position: absolute;
+  height: 8px;
+  border-radius: 20px;
+  background-color: orangered;
+  animation: loaderOverlay 2s ease-in-out forwards;
+}
+
+@keyframes loaderOverlay {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 400px;
+  }
+}
