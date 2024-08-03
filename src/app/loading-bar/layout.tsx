@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metaData: Metadata = {
-    title: "Loading Bar",
-    description: "Loading Bar"
+  title: "Loading Bar",
+  description: "Loading Bar"
 };
 
 export default function Layout({
