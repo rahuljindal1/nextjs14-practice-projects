@@ -1,4 +1,6 @@
-export const PROJECTS = [
+import { Project } from "./interface";
+
+export const PROJECTS: Project[] = [
   { id: 1, title: "Testimonial Slider", link: "/testimonial" },
   { id: 2, title: "Tip Calculator", link: "/tip-calculator" },
   { id: 3, title: "Age Calculator", link: "/age-calculator" },

@@ -16,6 +16,7 @@
     "chroma-js": "^2.4.2",
     "classnames": "^2.5.1",
     "generate-password": "^1.7.1",
+    "localforage": "^1.10.0",
     "lodash": "^4.17.21",
     "next": "14.2.4",
     "react": "^18",
