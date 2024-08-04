@@ -98,9 +98,10 @@ export default function Routes() {
       return <></>;
     }
 
+    const latestProjects = PROJECTS.toSorted((p1, p2) => p2.id - p1.id);
     return (
       <div className={styles.projectList}>
-        {PROJECTS.map(
+        {latestProjects.map(
           (project) =>
             !isPinned(project.id) && (
               <ProjectItem
