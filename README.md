@@ -42,3 +42,4 @@ bun dev
 22. Profile Card
 23. Image Slider
 24. Heart Trail Animation
+25. Feedback UI

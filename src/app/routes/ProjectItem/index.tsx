@@ -37,15 +37,6 @@ export default function ProjectItem({
     return (
       <div className={styles.actionOverlay}>
         <div className={styles.actionIcon}>
-          <PinIcon
-            project={project}
-            isPinned={isPinned}
-            pinToTop={pinToTop}
-            unPin={unPin}
-            isMaxItemsPinned={isMaxItemsPinned}
-          />
-        </div>
-        <div className={styles.actionIcon}>
           <Tooltip text="Visit Link">
             <FaLink
               onClick={() => {
@@ -54,6 +45,15 @@ export default function ProjectItem({
               className={iconStyles.icon}
             />
           </Tooltip>
+        </div>
+        <div className={styles.actionIcon}>
+          <PinIcon
+            project={project}
+            isPinned={isPinned}
+            pinToTop={pinToTop}
+            unPin={unPin}
+            isMaxItemsPinned={isMaxItemsPinned}
+          />
         </div>
       </div>
     );
