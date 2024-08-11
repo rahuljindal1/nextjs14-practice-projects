@@ -1,0 +1,65 @@
+.mainContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffff04;
+
+  .card {
+    width: 350px;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 4px 10px 20px rgba(0, 0, 0, 0.237);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .emojiWrapper {
+    height: 48px;
+    width: 48px;
+    overflow: hidden;
+
+    .emoji {
+      font-size: 48px;
+      transition: all 0.5s ease-in-out;
+
+      &.angryEmoji {
+        color: red;
+      }
+      &.angryFrown {
+        color: orange;
+      }
+      &.angryMeh {
+        color: lightblue;
+      }
+      &.angrySmile {
+        color: lightgreen;
+      }
+      &.angryLaugh {
+        color: green;
+      }
+    }
+  }
+
+  .ratingContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    .rating {
+      font-size: 2rem;
+      color: lightgray;
+      cursor: pointer;
+
+      &.activeRating {
+        color: gold;
+      }
+    }
+  }
+}
