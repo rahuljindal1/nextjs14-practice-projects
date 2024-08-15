@@ -2,7 +2,8 @@ import localforage from "localforage";
 import { isObject } from "lodash";
 
 export enum KEY_NAMES {
-  PINNED_PROJECT_IDS = "PINNED_PROJECT_IDS"
+  PINNED_PROJECT_IDS = "PINNED_PROJECT_IDS",
+  THEME = "THEME"
 }
 
 export class LocalForageService {

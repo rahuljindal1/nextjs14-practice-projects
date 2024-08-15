@@ -1,0 +1,61 @@
+.mainContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox {
+  visibility: hidden;
+}
+
+.checkboxLabel {
+  width: 80px;
+  height: 40px;
+  background-color: lightgray;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.circle {
+  height: 34px;
+  width: 34px;
+  border-radius: 100%;
+  position: absolute;
+  background-color: white;
+  top: 3px;
+  left: 4px;
+  animation: toggleOn 0.5s ease-in forwards;
+}
+
+.darkMode {
+  background-color: #000;
+
+  .checkboxLabel {
+    background-color: white;
+  }
+
+  .circle {
+    background-color: black;
+    animation: toggleOff 0.5s ease-in forwards;
+  }
+}
+
+@keyframes toggleOff {
+  from {
+    left: 4px;
+  }
+  to {
+    left: 42px;
+  }
+}
+
+@keyframes toggleOn {
+  from {
+    left: 42px;
+  }
+  to {
+    left: 4px;
+  }
+}

@@ -44,3 +44,4 @@ bun dev
 24. Heart Trail Animation
 25. Feedback UI
 26. Emoji Rating
+27. Dark Mode Toggle
