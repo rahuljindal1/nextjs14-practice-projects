@@ -45,3 +45,4 @@ bun dev
 25. Feedback UI
 26. Emoji Rating
 27. Dark Mode Toggle
+28. 3D Image Slider [ In Progress ]

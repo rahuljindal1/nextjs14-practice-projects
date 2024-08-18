@@ -43,5 +43,6 @@ export const PROJECTS: Project[] = [
   { id: 24, title: "Heart Trail Animation", link: "/heart-trail-animation" },
   { id: 25, title: "Feedback UI", link: "/feedback-ui" },
   { id: 26, title: "Emoji Rating", link: "/emoji-rating" },
-  { id: 27, title: "Dark Mode Toggle", link: "/dark-mode-toggle" }
+  { id: 27, title: "Dark Mode Toggle", link: "/dark-mode-toggle" },
+  { id: 28, title: "3D Image Slider", link: "/3d-image-slider" }
 ];

@@ -1,0 +1,48 @@
+.mainContainer {
+  height: 100vh;
+  background: url(./assets/bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+
+  .slider {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 15%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    animation: autoRun 30s linear infinite;
+
+    .item {
+      position: absolute;
+      inset: 0 0 0 0;
+      transform: rotateY(
+          calc((var(--position)) * (360 / var(--quantity)) * 1deg)
+        )
+        translateZ(550px);
+
+      .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@keyframes autoRun {
+  from {
+    transform: perspective(1200px) rotateX(-16deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1200px) rotateX(-16deg) rotateY(360deg);
+  }
+}
